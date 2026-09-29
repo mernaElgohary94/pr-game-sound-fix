@@ -7,6 +7,7 @@ import {
   type CameraKit,
   type CameraKitSession,
 } from '@snap/camera-kit';
+import { Analytics } from '@vercel/analytics/react';
 
 const API_TOKEN = import.meta.env.VITE_SNAP_CAMERA_KIT_API_TOKEN as string | undefined;
 const LENS_GROUP_ID = import.meta.env.VITE_SNAP_LENS_GROUP_ID as string | undefined;
@@ -238,6 +239,7 @@ export default function App() {
         {capture.type === 'photo' ? <img src={capture.url} alt="Captured Lens photo" /> : <video src={capture.url} controls autoPlay playsInline preload="auto" />}
         <button className="download-button" onClick={() => void saveCapture()}>Save to Gallery</button>
       </aside>}
+      <Analytics />
     </main>
   );
 }
