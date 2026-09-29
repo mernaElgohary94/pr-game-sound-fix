@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@snap/camera-kit": "^1.22.0",
+    "@vercel/analytics": "^2.0.1",
     "@vitejs/plugin-react": "latest",
     "react": "latest",
     "react-dom": "latest",
